@@ -1,0 +1,33 @@
+<%- include("header") -%>
+
+    <body>
+        <div class="box" id="heading">
+            <h1>
+                <%= listTitle %>
+            </h1>
+        </div>
+
+        <div class="box">
+
+
+            <% for(let i=0; i < newListItem.length; i++){ %>
+                <div class="item">
+                    <% if(newListItem[i] !=="" ){%>
+                        <input type="checkbox" name="" id="">
+                        <p>
+                            <%= newListItem[i] %>
+                        </p>
+                        <%}%>
+
+                </div>
+                <% } %>
+                    <form action="/" method="post">
+                        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                        <button type="submit" name="list" value=<%=listTitle%>>+</button>
+                    </form>
+
+        </div>
+    </body>
+
+    </html>
+    <%- include("footer") -%>
